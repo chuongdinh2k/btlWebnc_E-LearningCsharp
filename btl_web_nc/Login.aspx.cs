@@ -23,6 +23,7 @@ namespace btl_web_nc
         //Button đăng nhâp
         protected void Button1_Click(object sender, EventArgs e)
         {
+            Response.Redirect("GIANGVIEN/Lophoc.aspx");
             //Do MD5 Hashing...
             //Mã hóa mật khẩu bằng md5
             byte[] hs = new byte[50];

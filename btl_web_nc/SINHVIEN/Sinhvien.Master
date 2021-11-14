@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="btl_web_nc.ADMIN.admin" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Sinhvien.master.cs" Inherits="btl_web_nc.SINHVIEN.Sinhvien" %>
 
 <!DOCTYPE html>
 
@@ -7,18 +7,15 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-   
-     <webopt:bundlereference runat="server" path="~/Content/css" />
-     <link rel="stylesheet" type="text/css" href="Css/default.css" />
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+     <link rel="stylesheet" type="text/css" href="../Css/default.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../Content/font-awesome.min.css" rel="stylesheet" />
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
-  
 </head>
 <body>
     <form id="form1" runat="server">
-       
-        <asp:ScriptManager runat="server">
+          <asp:ScriptManager runat="server">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
                 <%--Framework Scripts--%>

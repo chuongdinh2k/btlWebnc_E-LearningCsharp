@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="btl_web_nc.ADMIN.admin" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Giangvien.master.cs" Inherits="btl_web_nc.GIANGVIEN.Giangvien" %>
 
 <!DOCTYPE html>
 
@@ -7,17 +7,15 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-   
      <webopt:bundlereference runat="server" path="~/Content/css" />
-     <link rel="stylesheet" type="text/css" href="Css/default.css" />
+     <link rel="stylesheet" type="text/css" href="../Css/default.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../Content/font-awesome.min.css" rel="stylesheet" />
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
-  
 </head>
 <body>
     <form id="form1" runat="server">
-       
+         
         <asp:ScriptManager runat="server">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
@@ -37,7 +35,7 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light">
               <a class="navbar-brand" href="#">LOGO</a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -46,13 +44,13 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
-                    <a class="nav-link" runat="server" href="#">Quản lý lớp học <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" runat="server" href="#">Lớp học của tôi <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" runat="server" href="#">Quản lý sinh viên</a>
+                    <a class="nav-link" runat="server" href="#">Xem lịch học</a>
                   </li>
                     <li class="nav-item">
-                    <a class="nav-link" runat="server" href="#">Quản lý giảng viên</a>
+                    <a class="nav-link" runat="server" href="#">Xem thông tin cá nhân</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -76,13 +74,11 @@
                 </div>
               </div>
             </nav>
-                
-        <div class="container">
-               <div class="addmin__wrapper pt-5">
-                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                             </asp:ContentPlaceHolder>
-               </div>
-            </div>
+               
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
     </form>
 </body>
 </html>
