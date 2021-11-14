@@ -77,7 +77,7 @@
                 </form>
                 <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      username
+                        <asp:Label ID="Label1" runat="server" Text="username"></asp:Label>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item" runat="server" href="#">Xem thông tin</a>

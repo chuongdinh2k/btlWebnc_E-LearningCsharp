@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Sinhvien.master.cs" Inherits="btl_web_nc.SINHVIEN.Sinhvien" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Sinhvien.master.cs" Inherits="btl_web_nc.SINHVIEN.Sinhvien" EnableEventValidation="false" %>
 
 <!DOCTYPE html>
 

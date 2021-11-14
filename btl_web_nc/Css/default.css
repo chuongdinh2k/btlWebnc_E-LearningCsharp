@@ -4,6 +4,9 @@
     box-sizing: border-box;
     background-color: #F6F7FA;
 }
+.btn__signout {
+    background-color: transparent;
+}
 .navLeft {
     padding: 0;
     margin: 0;

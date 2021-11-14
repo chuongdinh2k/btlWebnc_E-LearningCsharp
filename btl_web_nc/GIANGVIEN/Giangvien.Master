@@ -35,7 +35,7 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-                  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
               <a class="navbar-brand" href="#">LOGO</a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -68,10 +68,18 @@
                   <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm khóa học" aria-label="Search">
                   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
-                <div class="pr-5 pl-5">
-                    <label>Username</label>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <asp:Label ID="Label1" runat="server" Text="username"></asp:Label>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" runat="server" href="#">Xem thông tin</a>
+                       
+                        <div class="dropdown-divider"></div>
 
-                </div>
+                      <asp:Button ID="Button1" CssClass="btn btn__signout" runat="server" Text="Đăng xuất" OnClick="Button1_Click1" />
+                    </div>
+                  </div>
               </div>
             </nav>
                

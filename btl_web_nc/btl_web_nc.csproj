@@ -128,6 +128,7 @@
     <Content Include="Doimatkhau.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="GIANGVIEN\Chitietlophoc.aspx" />
     <Content Include="GIANGVIEN\Default.aspx" />
     <Content Include="GIANGVIEN\Lophoc.aspx" />
     <Content Include="Global.asax" />
@@ -247,6 +248,13 @@
     </Compile>
     <Compile Include="Doimatkhau.aspx.designer.cs">
       <DependentUpon>Doimatkhau.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GIANGVIEN\Chitietlophoc.aspx.cs">
+      <DependentUpon>Chitietlophoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GIANGVIEN\Chitietlophoc.aspx.designer.cs">
+      <DependentUpon>Chitietlophoc.aspx</DependentUpon>
     </Compile>
     <Compile Include="GIANGVIEN\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
