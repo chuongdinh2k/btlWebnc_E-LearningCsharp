@@ -13,5 +13,11 @@ namespace btl_web_nc.ADMIN
         {
 
         }
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Session.Clear();
+            Response.Redirect("https://localhost:44360/Login");
+        }
     }
 }

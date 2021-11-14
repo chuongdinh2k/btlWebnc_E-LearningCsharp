@@ -23,7 +23,6 @@ namespace btl_web_nc
         //Button đăng nhâp
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("GIANGVIEN/Lophoc.aspx");
             //Do MD5 Hashing...
             //Mã hóa mật khẩu bằng md5
             byte[] hs = new byte[50];
@@ -40,10 +39,10 @@ namespace btl_web_nc
             var hash_pass = sb.ToString();
             SqlConnection con = new SqlConnection(cnn);
             con.Open();
-            SqlCommand cmd = new SqlCommand("sp_login", con);
+            SqlCommand cmd = new SqlCommand("sp_dangnhap", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@username", txtUsername.Text);
-            cmd.Parameters.AddWithValue("@password", hash_pass);
+            cmd.Parameters.AddWithValue("@sAccount", txtUsername.Text);
+            cmd.Parameters.AddWithValue("@sPassword", hash_pass);
             cmd.ExecuteNonQuery();
             DataTable dtbl = new DataTable();
 
@@ -53,10 +52,24 @@ namespace btl_web_nc
             {
                 for (int i = 0; i < dtbl.Rows.Count; i++)
                 {
-                    String UserId = dtbl.Rows[i]["sPk_sIdAccount"].ToString();/* lưu id user vào sessison*/
+                    String UserId = dtbl.Rows[i]["sAccount"].ToString();/* lưu id user vào sessison*/
+                    String Role = dtbl.Rows[i]["stenquyen"].ToString();
                     Session["UserId"] = UserId;
+                    Session["Role"] = dtbl.Rows[i]["stenQuyen"].ToString();
+                    if (Role == "ADMIN")
+                    {
+                        Response.Redirect("ADMIN/Default.aspx");
+                    }
+                    else if(Role=="GV")
+                    {
+                        Response.Redirect("GIANGVIEN/Default.aspx");
+                    }
+                    else if (Role == "SV")
+                    {
+                        Response.Redirect("SINHVIEN/Lophoc.aspx");
+                    }
                 }
-                Response.Redirect("Default.aspx");/* điều hướng khi đăng nhập thành công*/
+               
 
             }
             else

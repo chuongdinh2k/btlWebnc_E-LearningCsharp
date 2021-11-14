@@ -13,7 +13,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../Content/font-awesome.min.css" rel="stylesheet" />
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
-  
+    <style>
+        .btn__signout{
+            background-color:transparent;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -37,7 +41,7 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
               <a class="navbar-brand" href="#">LOGO</a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -46,23 +50,24 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
-                    <a class="nav-link" runat="server" href="#">Quản lý lớp học <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" runat="server" href="~/ADMIN/Default.aspx">Quản lý lớp học <span class="sr-only">(current)</span></a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" runat="server" href="#">Quản lý sinh viên</a>
-                  </li>
-                    <li class="nav-item">
-                    <a class="nav-link" runat="server" href="#">Quản lý giảng viên</a>
+                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Quan lý giảng viên
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" runat="server" href="~/ADMIN/danhsachgiangvien.aspx">Xem danh sách giảng viên</a>
+                      <a class="dropdown-item" runat="server" href="#">Thêm giảng viên</a>
+                    </div>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Dropdown
+                      Quan lý sinh viên
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" runat="server" href="#">Action</a>
-                      <a class="dropdown-item" runat="server" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                      <a class="dropdown-item" runat="server" href="~/ADMIN/danhsachsinhvien.aspx">Xem danh sách sinh viên</a>
+                      <a class="dropdown-item" runat="server" href="#">Thêm sinh viên</a>
                     </div>
                   </li>
                 </ul>
@@ -70,11 +75,21 @@
                   <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm khóa học" aria-label="Search">
                   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
-                <div class="pr-5 pl-5">
-                    <label>Username</label>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      username
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" runat="server" href="#">Xem thông tin</a>
+                       
+                        <div class="dropdown-divider"></div>
 
-                </div>
+                      <asp:Button ID="Button1" CssClass="btn btn__signout" runat="server" Text="Đăng xuất" OnClick="Button1_Click1" />
+                    </div>
+                  </div>
               </div>
+                 
+                 <%--<asp:Button ID="Button1" CssClass="btn btn__signout" runat="server" Text="Đăng xuất" OnClick="Button1_Click1" />--%>
             </nav>
                 
         <div class="container">

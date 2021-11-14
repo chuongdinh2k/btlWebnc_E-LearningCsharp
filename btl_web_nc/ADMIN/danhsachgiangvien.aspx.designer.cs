@@ -11,16 +11,16 @@ namespace btl_web_nc.ADMIN
 {
 
 
-    public partial class Default
+    public partial class danhsachgiangvien
     {
 
         /// <summary>
-        /// rptLophoc control.
+        /// rptGiangvien control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptLophoc;
+        protected global::System.Web.UI.WebControls.Repeater rptGiangvien;
     }
 }

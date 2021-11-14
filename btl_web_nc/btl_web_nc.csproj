@@ -108,6 +108,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ADMIN\Css\default.css" />
+    <Content Include="ADMIN\danhsachgiangvien.aspx" />
+    <Content Include="ADMIN\danhsachsinhvien.aspx" />
     <Content Include="ADMIN\Default.aspx" />
     <Content Include="assets\avatar.jpg" />
     <Content Include="assets\Logo_Đại_học_Mở_Hà_Nội-removebg-preview.png" />
@@ -123,6 +125,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Css\default.css" />
     <Content Include="Css\login.css" />
+    <Content Include="Doimatkhau.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="GIANGVIEN\Default.aspx" />
@@ -215,6 +218,20 @@
     <Compile Include="ADMIN\admin.Master.designer.cs">
       <DependentUpon>admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="ADMIN\danhsachgiangvien.aspx.cs">
+      <DependentUpon>danhsachgiangvien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\danhsachgiangvien.aspx.designer.cs">
+      <DependentUpon>danhsachgiangvien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\danhsachsinhvien.aspx.cs">
+      <DependentUpon>danhsachsinhvien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\danhsachsinhvien.aspx.designer.cs">
+      <DependentUpon>danhsachsinhvien.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ADMIN\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -224,6 +241,13 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Doimatkhau.aspx.cs">
+      <DependentUpon>Doimatkhau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Doimatkhau.aspx.designer.cs">
+      <DependentUpon>Doimatkhau.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GIANGVIEN\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
