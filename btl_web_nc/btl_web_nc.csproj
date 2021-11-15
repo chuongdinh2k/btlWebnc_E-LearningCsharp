@@ -128,7 +128,9 @@
     <Content Include="Doimatkhau.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="GIANGVIEN\Chitietbuoihoc.aspx" />
     <Content Include="GIANGVIEN\Chitietlophoc.aspx" />
+    <Content Include="GIANGVIEN\danhsachdiemdanh.aspx" />
     <Content Include="GIANGVIEN\Default.aspx" />
     <Content Include="GIANGVIEN\Lophoc.aspx" />
     <Content Include="Global.asax" />
@@ -249,12 +251,26 @@
     <Compile Include="Doimatkhau.aspx.designer.cs">
       <DependentUpon>Doimatkhau.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GIANGVIEN\Chitietbuoihoc.aspx.cs">
+      <DependentUpon>Chitietbuoihoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GIANGVIEN\Chitietbuoihoc.aspx.designer.cs">
+      <DependentUpon>Chitietbuoihoc.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GIANGVIEN\Chitietlophoc.aspx.cs">
       <DependentUpon>Chitietlophoc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GIANGVIEN\Chitietlophoc.aspx.designer.cs">
       <DependentUpon>Chitietlophoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GIANGVIEN\danhsachdiemdanh.aspx.cs">
+      <DependentUpon>danhsachdiemdanh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GIANGVIEN\danhsachdiemdanh.aspx.designer.cs">
+      <DependentUpon>danhsachdiemdanh.aspx</DependentUpon>
     </Compile>
     <Compile Include="GIANGVIEN\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -312,6 +328,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="upload\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -36,8 +36,9 @@ select * from tblTaiKhoan;
 
 --insert Taikhoan mật khẩu: 123456789
 insert into tblTaiKhoan(sAccount,sPassword,iMaQuyen)
-values('Admin1','25f9e794323b453885f5181f1b624d0b',1),
-('GV01','25f9e794323b453885f5181f1b624d0b',2);
+--values('Admin1','25f9e794323b453885f5181f1b624d0b',1),
+--('GV01','25f9e794323b453885f5181f1b624d0b',2);
+values('SV01','25f9e794323b453885f5181f1b624d0b',3)
 
 
 select * from tblQuyen;

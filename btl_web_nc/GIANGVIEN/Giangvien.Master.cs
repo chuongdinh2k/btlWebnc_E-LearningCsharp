@@ -24,7 +24,7 @@ namespace btl_web_nc.GIANGVIEN
         {
             Session.Abandon();
             Session.Clear();
-            Response.Redirect("~Login.aspx");
+            Response.Redirect("https://localhost:44360/Login");
         }
     }
 }

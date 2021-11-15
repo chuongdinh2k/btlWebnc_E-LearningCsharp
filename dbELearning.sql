@@ -106,6 +106,10 @@ create table tblBuoiHoc
 )
 GO
 
+--thêm trạng thái buổi học
+alter table tblBuoihoc
+add strangthai nvarchar(10)
+
 create table tblDiemDanh
 (
 	sDiemDanhId varchar(50) primary key not null,

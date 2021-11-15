@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="btl_web_nc.Login" EnableEventValidation="false" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="Login.aspx.cs" Inherits="btl_web_nc.Login"  %>
 
 <!DOCTYPE html>
 

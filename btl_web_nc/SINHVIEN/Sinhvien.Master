@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Sinhvien.master.cs" Inherits="btl_web_nc.SINHVIEN.Sinhvien" EnableEventValidation="false" %>
+﻿<%@ Master Language="C#"  AutoEventWireup="true" CodeBehind="Sinhvien.master.cs" Inherits="btl_web_nc.SINHVIEN.Sinhvien"  %>
 
 <!DOCTYPE html>
 
@@ -63,14 +63,22 @@
                     </div>
                   </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
+                <div class="form-inline my-2 my-lg-0">
                   <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm khóa học" aria-label="Search">
                   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-                <div class="pr-5 pl-5">
-                    <label>Username</label>
-
                 </div>
+                   <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <asp:Label ID="Label1" runat="server" Text="username"></asp:Label>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" runat="server" href="#">Xem thông tin</a>
+                       
+                        <div class="dropdown-divider"></div>
+
+                      <asp:Button ID="Button1" CssClass="btn btn__signout" runat="server" Text="Đăng xuất" OnClick="Button1_Click1" />
+                    </div>
+                  </div>
               </div>
             </nav>
                 

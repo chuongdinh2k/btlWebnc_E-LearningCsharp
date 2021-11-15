@@ -11,7 +11,21 @@ namespace btl_web_nc.SINHVIEN
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                if (HttpContext.Current.Session["UserId"] == null)
+                {
+                    Response.Redirect("https://localhost:44360/Login");
+                }
+                Label1.Text = HttpContext.Current.Session["UserId"].ToString();
+            }
+        }
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Session.Clear();
+            Response.Redirect("https://localhost:44360/Login");
         }
     }
+    
 }

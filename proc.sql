@@ -32,3 +32,4 @@ as
 
 drop proc sp_danhsachlop_gv;
 exec sp_danhsachlop_GV 'GV01';
+
