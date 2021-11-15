@@ -111,6 +111,7 @@
     <Content Include="ADMIN\danhsachgiangvien.aspx" />
     <Content Include="ADMIN\danhsachsinhvien.aspx" />
     <Content Include="ADMIN\Default.aspx" />
+    <Content Include="ADMIN\TaoTaiKhoanGV.aspx" />
     <Content Include="assets\avatar.jpg" />
     <Content Include="assets\Logo_Đại_học_Mở_Hà_Nội-removebg-preview.png" />
     <Content Include="assets\user.png" />
@@ -241,6 +242,13 @@
     </Compile>
     <Compile Include="ADMIN\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\TaoTaiKhoanGV.aspx.cs">
+      <DependentUpon>TaoTaiKhoanGV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\TaoTaiKhoanGV.aspx.designer.cs">
+      <DependentUpon>TaoTaiKhoanGV.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />

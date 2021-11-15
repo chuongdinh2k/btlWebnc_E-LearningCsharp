@@ -6,22 +6,24 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-    <p class="pt-5">
+ <%--   <p class="pt-5">
       <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
         Cập nhật thông tin buổi học
       </a>
-    </p>
-    <div class="collapse" id="collapseExample">
+    </p>--%>
+    <%--<div class="collapse" id="collapseExample">--%>
       <div class="card card-body">
           
         <div>
           <div class="form-group">
             <label for="exampleInputEmail1">Tiêu đề</label>
-            <asp:TextBox ID="txtTieude" CssClass="form-control" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtTieude" CssClass="form-control" runat="server"  OnTextChanged="txtTieude_OnTextChanged"></asp:TextBox>
+              <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Không được để trống!" ControlToValidate="txtTieude" ForeColor="Red"></asp:RequiredFieldValidator>
           </div>
          <div class="form-group">
             <label for="exampleInputEmail1">Nội dung</label>
             <asp:TextBox ID="txtNoidung" CssClass="form-control" runat="server" TextMode="MultiLine"></asp:TextBox>
+             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Không được để trống!" BorderColor="Red" ControlToValidate="txtNoidung" ForeColor="Red"></asp:RequiredFieldValidator>
           </div>
             <div class="form-group">
                  <label>Tệp đính kèm:</label>
@@ -29,7 +31,7 @@
             </div>
            <div class="form-group">
                <label>Trạng thái:</label>
-                 <asp:DropDownList ID="ddlTrangthai" runat="server">
+                 <asp:DropDownList ID="ddlTrangthai" runat="server" OnSelectedIndexChanged="ddlTrangthai_SelectedIndexChanged">
                      <asp:ListItem>Học</asp:ListItem>
                      <asp:ListItem>Nghỉ</asp:ListItem>
                 </asp:DropDownList>
@@ -38,11 +40,12 @@
         <asp:Button ID="btnCapnhat" CssClass="btn btn-primary" runat="server" Text="Cập nhật" OnClick="btnCapnhat_Click" />  
         </div>
       </div>
-    </div>
+<%--    </div>--%>
     <div class="content p-2">
-        
         <asp:Label ID="txtBuoihoc" runat="server" Text="Buổi học số 1"></asp:Label>
-        <table class="table table-hover table-bordered" style="width:100%">
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <table class="table table-hover table-bordered" style="width:100%">
                     <tbody>
                         <tr>
                             <th>Tiêu đề</th>
@@ -58,9 +61,17 @@
                         </tr>
                         <tr>
                             <th>Nội dung</th>
+                           
                             <th>
                                <asp:Label ID="lbNoidung" runat="server" Text="Bài học đầu tiên sẽ là ví dụ...."></asp:Label>
                             </th>
+                        </tr>
+                        <tr>
+                            <th>Tệp đính kèm</th>
+                            <th>
+                               <asp:Label ID="lbTepdinhkem" runat="server" Text=""></asp:Label>
+                            </th>
+                            
                         </tr>
                         <tr>
                             <th>Thời gian bắt đầu</th>
@@ -83,6 +94,13 @@
                     </tbody>
 
             </table>
+            </ContentTemplate>
+             <Triggers>
+            <asp:AsyncPostBackTrigger ControlID="btnCapnhat" EventName="Click" />
+            </Triggers>
+        </asp:UpdatePanel>
+        
+        
         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/GIANGVIEN/danhsachdiemdanh.aspx">Xem danh sách sinh viên điểm danh</asp:HyperLink>
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     </div>

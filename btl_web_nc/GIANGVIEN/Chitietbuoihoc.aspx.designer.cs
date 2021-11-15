@@ -24,6 +24,15 @@ namespace btl_web_nc.GIANGVIEN
         protected global::System.Web.UI.WebControls.TextBox txtTieude;
 
         /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+
+        /// <summary>
         /// txtNoidung control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace btl_web_nc.GIANGVIEN
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNoidung;
+
+        /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
 
         /// <summary>
         /// FileUpload1 control.
@@ -69,6 +87,15 @@ namespace btl_web_nc.GIANGVIEN
         protected global::System.Web.UI.WebControls.Label txtBuoihoc;
 
         /// <summary>
+        /// UpdatePanel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+
+        /// <summary>
         /// lbTieude control.
         /// </summary>
         /// <remarks>
@@ -94,6 +121,15 @@ namespace btl_web_nc.GIANGVIEN
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbNoidung;
+
+        /// <summary>
+        /// lbTepdinhkem control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbTepdinhkem;
 
         /// <summary>
         /// lbThoigianbatdau control.

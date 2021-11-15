@@ -2,6 +2,7 @@
 
 select * from tblTaiKhoan;
 select * from tblQuyen;
+select * from tblLop;
 
 --Thêm thời gian bắt đầu vào buổi học
 ALTER TABLE tblBuoihoc
@@ -32,4 +33,30 @@ as
 
 drop proc sp_danhsachlop_gv;
 exec sp_danhsachlop_GV 'GV01';
+
+--Cập nhật buổi học
+create proc sp_gv_capnhatbuoihoc(@id int,
+	@tieude nvarchar(50),
+	@sNoidung nvarchar(100),
+	@sTepdinhkem varchar(50),
+	@sTrangThai nvarchar(10)
+)
+as
+	update tblBuoiHoc 
+	set sTieude = @tieude, sNoiDung = @sNoidung, stepdinhkem = @sTepdinhkem, strangthai = @sTrangThai
+	where iBuoiHocId = @id
+
+-- get sAccount from tblsinhvien,tblgiang vien
+select * from tblSinhVien;
+select * from tblGiangvien;
+select * from tblTaiKhoan;
+
+create proc sp_accountNotCreated
+as
+	select tblSinhVien.sAccount from tblSinhVien where tblSinhVien.sAccount not in ( select tblTaiKhoan.sAccount from tblTaiKhoan)
+union select tblGiangVien.sAccount from tblGiangVien where tblGiangVien.sAccount not in ( select tblTaiKhoan.sAccount from tblTaiKhoan)
+
+exec sp_accountNotCreated;
+select tblSinhVien.sAccount from tblSinhVien where tblSinhVien.sAccount not in ( select tblTaiKhoan.sAccount from tblTaiKhoan)
+
 
