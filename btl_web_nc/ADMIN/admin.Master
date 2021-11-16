@@ -58,7 +58,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item" runat="server" href="~/ADMIN/danhsachgiangvien.aspx">Xem danh sách giảng viên</a>
-                      <a class="dropdown-item" runat="server" href="#">Thêm giảng viên</a>
+                      <a class="dropdown-item" runat="server" href="~/ADMIN/Themgiangvien.aspx">Thêm giảng viên</a>
                       <a class="dropdown-item" runat="server" href="#">Tạo tài khoản giảng viên</a>
                     </div>
                   </li>
@@ -68,15 +68,15 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item" runat="server" href="~/ADMIN/danhsachsinhvien.aspx">Xem danh sách sinh viên</a>
-                      <a class="dropdown-item" runat="server" href="#">Thêm sinh viên</a>
+                      <a class="dropdown-item" runat="server" href="~/ADMIN/Themsinhvien.aspx">Thêm sinh viên</a>
                       <a class="dropdown-item" runat="server" href="#">Tạo tài khoản sinh viên</a>
                     </div>
                   </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
+                <div  class="form-inline my-2 my-lg-0">
                   <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm khóa học" aria-label="Search">
                   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+                </div>
                 <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <asp:Label ID="Label1" runat="server" Text="username"></asp:Label>

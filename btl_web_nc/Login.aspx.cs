@@ -44,6 +44,7 @@ namespace btl_web_nc
             cmd.Parameters.AddWithValue("@sAccount", txtUsername.Text);
             cmd.Parameters.AddWithValue("@sPassword", hash_pass);
             cmd.ExecuteNonQuery();
+            con.Close();
             DataTable dtbl = new DataTable();
 
             SqlDataAdapter sqlsda = new SqlDataAdapter(cmd);

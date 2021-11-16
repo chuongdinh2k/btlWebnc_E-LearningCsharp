@@ -10,7 +10,7 @@
 
 namespace btl_web_nc.ADMIN
 {
-    public partial class TaoTaiKhoanGV
+    public partial class ThemLophoc
     {
     }
 }

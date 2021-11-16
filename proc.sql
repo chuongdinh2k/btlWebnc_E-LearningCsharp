@@ -4,6 +4,29 @@ select * from tblTaiKhoan;
 select * from tblQuyen;
 select * from tblLop;
 
+--proc insert giảng viên
+create proc sp_themgiangvien(
+	@sGiangVienId varchar(50),
+	@sTen nvarchar(50) ,
+	@sGioitinh nvarchar(50),
+	@dNgaysinh datetime ,
+	@sDiachi nvarchar(50) ,
+	@sEmail varchar(50) ,
+	@sCmnd varchar(50) ,
+	@sSodienthoai varchar (10),
+	@sBangcap nvarchar(50)
+)
+as
+	insert into tblGiangVien(sGiangVienId,sTen,sGioitinh,dNgaysinh,sDiachi,sEmail,sCmnd,sSodienthoai,sBangcap,sAccount)
+	values(@sGiangvienid,@sTen,@sGioitinh,@dNgaysinh,@sDiachi,@sEmail,@sCmnd,@sSodienthoai,@sBangcap,@sGiangVienId);
+
+--proc tạo tài khoản
+select * from tblTaikhoan;
+create proc sp_creatAccount(@sAccount varchar(50),@sPassword varchar(50),@iMaquyen int)
+as
+	insert into tblTaiKhoan(sAccount,sPassword,iMaQuyen)
+	values(@sAccount,@sPassword,@iMaquyen);
+
 --Thêm thời gian bắt đầu vào buổi học
 ALTER TABLE tblBuoihoc
 ADD sthoigianbatdau varchar(50);
@@ -60,3 +83,5 @@ exec sp_accountNotCreated;
 select tblSinhVien.sAccount from tblSinhVien where tblSinhVien.sAccount not in ( select tblTaiKhoan.sAccount from tblTaiKhoan)
 
 
+select * from tblGiangVien;	
+select * from tblTaiKhoan;
