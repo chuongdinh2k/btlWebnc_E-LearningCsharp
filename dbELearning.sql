@@ -118,6 +118,15 @@ create table tblDiemDanh
 	bDiemDanh bit
 )
 GO
+--Tạo bảng Thảo luân buổi học
+create table tblThaoluanchung
+(
+	iMathaoluan int IDENTITY(1,1) PRIMARY KEY,
+	sNoidung nvarchar(MAX),
+	dNgay date,
+	sAccount varchar(10),
+	sLopid varchar(10)
+)
 
 ALTER TABLE tblDiemDanh add sghichu nvarchar(50);
 GO

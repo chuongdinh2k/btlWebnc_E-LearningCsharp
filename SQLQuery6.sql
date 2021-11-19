@@ -1,4 +1,5 @@
-use webtintuc;
+use db_Elearning;
 
-alter table tblUser
-add fkPermission int;
+select * from tblGiangVien;
+select * from tblSinhvien;
+select * from tblTaiKhoan;

@@ -136,6 +136,7 @@
     <Content Include="GIANGVIEN\danhsachdiemdanh.aspx" />
     <Content Include="GIANGVIEN\Default.aspx" />
     <Content Include="GIANGVIEN\Lophoc.aspx" />
+    <Content Include="GIANGVIEN\Thaoluanchung.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -316,6 +317,13 @@
     </Compile>
     <Compile Include="GIANGVIEN\Lophoc.aspx.designer.cs">
       <DependentUpon>Lophoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GIANGVIEN\Thaoluanchung.aspx.cs">
+      <DependentUpon>Thaoluanchung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GIANGVIEN\Thaoluanchung.aspx.designer.cs">
+      <DependentUpon>Thaoluanchung.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

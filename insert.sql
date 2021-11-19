@@ -61,3 +61,9 @@ select * from tblBuoiHoc;
 --Insert Buổi học
 insert into tblBuoiHoc(dThoiGian,sTieuDe,sNoiDung,sLopId,sThoigianbatday,sthoigianketthuc)
 values('2021-11-14',N'Bài học đầu tiên',N'Bài học đầu tiên sẽ là ví dụ đầu tiên','lop01','7h30','11h30')
+
+
+select * from tblThaoluanchung;
+select * from tblLop;
+insert into tblThaoluanchung(sNoidung,dNgay,sAccount,sLopid)
+values(N'Chào các bạn','2021-11-16','GV01','lop01');
