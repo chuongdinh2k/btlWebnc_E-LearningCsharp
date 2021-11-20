@@ -12,6 +12,8 @@
       </a>
     </p>--%>
     <%--<div class="collapse" id="collapseExample">--%>
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
       <div class="card card-body">
           
         <div>
@@ -41,10 +43,8 @@
         </div>
       </div>
 <%--    </div>--%>
-    <div class="content p-2">
+        <div class="content p-2">
         <asp:Label ID="txtBuoihoc" runat="server" Text="Buổi học số 1"></asp:Label>
-        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-            <ContentTemplate>
                 <table class="table table-hover table-bordered" style="width:100%">
                     <tbody>
                         <tr>
@@ -94,15 +94,16 @@
                     </tbody>
 
             </table>
+            </div>
             </ContentTemplate>
              <Triggers>
-            <asp:AsyncPostBackTrigger ControlID="btnCapnhat" EventName="Click" />
+               
+            <asp:PostBackTrigger ControlID="btnCapnhat"  />
             </Triggers>
         </asp:UpdatePanel>
         
-        
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/GIANGVIEN/danhsachdiemdanh.aspx">Xem danh sách sinh viên điểm danh</asp:HyperLink>
+         <%-- <asp:HyperLink ID="HyperLink1" CssClass="pt-2" NavigateUrl='<%# string.Concat("danhsachdiemdanh.aspx?ID=", Eval("iBuoihocid"))%>'  runat="server">Xem chi tiết</asp:HyperLink>--%>
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-    </div>
+  <%--  </div>--%>
      
 </asp:Content>

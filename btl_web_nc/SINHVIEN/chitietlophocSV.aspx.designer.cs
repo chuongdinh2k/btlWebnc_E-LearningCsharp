@@ -7,20 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace btl_web_nc.GIANGVIEN
+namespace btl_web_nc.SINHVIEN
 {
 
 
-    public partial class danhsachdiemdanh
+    public partial class chitietlophocSV
     {
 
         /// <summary>
-        /// rptdiemdanh control.
+        /// rptBuoihoc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptdiemdanh;
+        protected global::System.Web.UI.WebControls.Repeater rptBuoihoc;
     }
 }

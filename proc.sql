@@ -3,7 +3,8 @@
 select * from tblTaiKhoan;
 select * from tblQuyen;
 select * from tblLop;
-
+select * from tblBuoiHoc;
+select * from tblDiemDanh;
 --proc insert giảng viên
 create proc sp_themgiangvien(
 	@sGiangVienId varchar(50),
@@ -106,5 +107,9 @@ as
 	and tblDanhsach_SV_Lop.sSinhVienId = @userid; 
 
 
-
-
+--Lấy danh sách sinh viên điểm danh
+create proc sp_list_diemdanh(@iBuoihocid int)
+as
+	select * from tbldiemdanh,tblDanhsach_SV_Lop,tblBuoiHoc where tblBuoiHoc.sLopId = tblDanhsach_SV_Lop.sLopId
+	and tblDiemDanh.iBuoiHocId = tblBuoiHoc.iBuoiHocId and tblBuoiHoc.iBuoiHocId=@iBuoihocid; 
+select * from tblBuoihoc;

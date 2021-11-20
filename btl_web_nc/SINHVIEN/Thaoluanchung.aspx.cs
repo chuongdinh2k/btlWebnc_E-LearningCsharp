@@ -7,14 +7,14 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
-namespace btl_web_nc.GIANGVIEN
+namespace btl_web_nc.SINHVIEN
 {
     public partial class Thaoluanchung : System.Web.UI.Page
     {
         string cnn = ConfigurationManager.ConnectionStrings["CnnStr"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-            loadData(); 
+            loadData();
         }
         private void loadData()
         {
@@ -30,7 +30,7 @@ namespace btl_web_nc.GIANGVIEN
             rptThaoluan.DataBind();
             con.Close();
         }
-            
+
         protected void btnSend_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(cnn);
@@ -38,16 +38,9 @@ namespace btl_web_nc.GIANGVIEN
             SqlCommand cmd = new SqlCommand("sp_Themthaoluan", con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@sNoidung", txtNoidung.Text);
-            cmd.Parameters.AddWithValue("@dNgay","2021-11-16");
-            cmd.Parameters.AddWithValue("@sAccount",Session["UserId"].ToString());
+            cmd.Parameters.AddWithValue("@dNgay", DateTime.Now.Date);
+            cmd.Parameters.AddWithValue("@sAccount", Session["UserId"].ToString());
             cmd.Parameters.AddWithValue("@sLopid", Request.QueryString["ID"]);
-            //SqlDataAdapter sda = new SqlDataAdapter(cmd);
-            //DataTable dt = new DataTable();
-            //sda.Fill(dt);
-            //rptThaoluan.DataSource = dt;
-            //rptThaoluan.DataBind();
-            //con.Close();
-
             int a = cmd.ExecuteNonQuery();
             con.Close();
             if (a == 0)

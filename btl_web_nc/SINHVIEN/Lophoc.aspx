@@ -10,7 +10,7 @@
                   <div class="card-body">
                     <h5 class="card-title"><%# Eval("sTenLop") %></h5>
                     <p class="card-text">Mã lớp: <%# Eval("sLopid") %></p>
-                      <asp:HyperLink ID="HyperLink1" NavigateUrl='<%# string.Concat("Chitietlophoc.aspx?ID=", Eval("sLopid"))%>' CssClass="btn btn-success" runat="server">Xem chi tiết</asp:HyperLink>
+                      <asp:HyperLink ID="HyperLink1" NavigateUrl='<%# string.Concat("ChitietlophocSV.aspx?ID=", Eval("sLopid"))%>' CssClass="btn btn-success" runat="server">Xem chi tiết</asp:HyperLink>
                        <asp:HyperLink ID="HyperLink2" NavigateUrl='<%# string.Concat("Thaoluanchung.aspx?ID=", Eval("sLopid"))%>' CssClass="btn btn-success" runat="server">Thảo luận</asp:HyperLink> 
                   </div>
             </div>

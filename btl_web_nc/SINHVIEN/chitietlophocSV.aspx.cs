@@ -7,25 +7,29 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
-namespace btl_web_nc.GIANGVIEN
+namespace btl_web_nc.SINHVIEN
 {
-    public partial class danhsachdiemdanh : System.Web.UI.Page
+    public partial class chitietlophocSV : System.Web.UI.Page
     {
         string cnn = ConfigurationManager.ConnectionStrings["CnnStr"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(cnn);
             con.Open();
-            SqlCommand cmd = new SqlCommand("sp_list_diemdanh", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@ibuoihocid", Request.QueryString["ID"]);
+            SqlCommand cmd = new SqlCommand("select * from tblBuoihoc where sLopid=@id", con);
+            cmd.Parameters.AddWithValue("@id", Request.QueryString["ID"]);
 
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            rptdiemdanh.DataSource = dt;
-            rptdiemdanh.DataBind();
+           
+            rptBuoihoc.DataSource = dt;
+            rptBuoihoc.DataBind();
             con.Close();
         }
+        //protected string GetURLPath()
+        //{
+        //    return "/Request.aspx?UserID=" + Request.QueryString["userid"] + "&UserName=" + Request.QueryString["username"];
+        //}
     }
 }

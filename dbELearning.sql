@@ -112,12 +112,13 @@ add strangthai nvarchar(10)
 
 create table tblDiemDanh
 (
-	sDiemDanhId varchar(50) primary key not null,
-	sBuoiHocId varchar(50) not null,
+	iDiemDanhId int IDENTITY(1,1) primary key not null,
+	iBuoiHocId int not null,
 	sSinhVienId varchar(50) not null,
 	bDiemDanh bit
 )
 GO
+
 --Tạo bảng Thảo luân buổi học
 create table tblThaoluanchung
 (

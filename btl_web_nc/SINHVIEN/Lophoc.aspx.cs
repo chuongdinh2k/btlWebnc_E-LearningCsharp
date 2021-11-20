@@ -25,7 +25,7 @@ namespace btl_web_nc.SINHVIEN
             sda.Fill(dt);
             rptLophoc.DataSource = dt;
             rptLophoc.DataBind();
-            con.Close();
+            con.Close();  
         }
     }
 
