@@ -13,7 +13,7 @@
                             <div class="col-8 d-flex ">
                                 <p class="pr-5"><%# Eval("sAccount") %>:</p>
                                 <p class="pr-5"><%# Eval("sNoidung") %></p>
-                                <p class="pr-5"><i><%# Eval("dNgay") %></i></p>
+                                <p class="pr-5"><i><%#Eval("dNgay", "{0:dd/M/yyyy}")%></i></p>
                             </div>
                         </div>
                     </ItemTemplate>

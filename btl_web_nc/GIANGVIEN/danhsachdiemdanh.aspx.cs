@@ -16,9 +16,10 @@ namespace btl_web_nc.GIANGVIEN
         {
             SqlConnection con = new SqlConnection(cnn);
             con.Open();
-            SqlCommand cmd = new SqlCommand("sp_list_diemdanh", con);
+            SqlCommand cmd = new SqlCommand("sp_DanhSachDiemDanh", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@ibuoihocid", Request.QueryString["ID"]);
+            cmd.Parameters.AddWithValue("@slopid", Request.QueryString["slopid"]);
+            cmd.Parameters.AddWithValue("@ibuoihocid", Request.QueryString["ibuoihocid"]);
 
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();

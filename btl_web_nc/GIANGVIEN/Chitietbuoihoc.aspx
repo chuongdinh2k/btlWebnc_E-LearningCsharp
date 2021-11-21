@@ -12,7 +12,7 @@
       </a>
     </p>--%>
     <%--<div class="collapse" id="collapseExample">--%>
-    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+ <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
       <div class="card card-body">
           
@@ -98,7 +98,8 @@
             </ContentTemplate>
              <Triggers>
                
-            <asp:PostBackTrigger ControlID="btnCapnhat"  />
+                <asp:PostBackTrigger ControlID="btnCapnhat"  />
+                 <asp:PostBackTrigger ControlID="FileUpload1" />
             </Triggers>
         </asp:UpdatePanel>
         

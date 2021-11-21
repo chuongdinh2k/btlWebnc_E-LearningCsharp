@@ -67,7 +67,7 @@ namespace btl_web_nc.GIANGVIEN
 
         protected void btnCapnhat_Click(object sender, EventArgs e)
         {
-            Page.Form.Attributes.Add("enctype", "multipart/form-data");
+           
             //if (FileUpload1.HasFile)
             //{
             if (FileUpload1.HasFile ==true)

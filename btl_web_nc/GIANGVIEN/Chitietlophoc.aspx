@@ -8,7 +8,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h2 class="text-center">LỊCH GIẢNG DẠY</h2>
-    <asp:Repeater ID="rptBuoihoc" runat="server">
+    <asp:Repeater ID="rptBuoihoc" OnItemDataBound="rptBuoihoc_ItemDataBound" runat="server">
         <ItemTemplate>
             <div class="row pt-2 pb-2">
                 <div class="col-12 d-flex room__list">
@@ -18,7 +18,7 @@
                     <p class="pr-4 pt-2">Thời gian bắt đầu: <%# Eval("sThoigianbatday") %></p>
                     <p class="pr-4 pt-2">Thời gian kết thúc: <%# Eval("sthoigianketthuc") %></p>
                      <asp:HyperLink ID="HyperLink1" CssClass="pt-2" NavigateUrl='<%# string.Concat("Chitietbuoihoc.aspx?ID=", Eval("iBuoihocid"))%>'  runat="server">Xem chi tiết</asp:HyperLink>
-                    <asp:HyperLink ID="HyperLink2" CssClass="pt-2" NavigateUrl='<%# string.Concat("danhsachdiemdanh.aspx?ID=", Eval("iBuoihocid"))%>'  runat="server">Danh sách điểm danh</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink2" CssClass="pt-2"  runat="server">Danh sách điểm danh</asp:HyperLink>
                 </div>
             </div>
            
